@@ -1,0 +1,14 @@
+html
+{
+  font-size: 16px;
+}
+
+/*Header*/
+header
+{
+  display: flex;
+}
+
+nav {
+  display: flex;
+}
