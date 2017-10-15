@@ -1,14 +1,39 @@
-html
-{
+html {
   font-size: 16px;
+  font-family: Helvetica;
 }
 
 /*Header*/
-header
-{
+header {
   display: flex;
+  align-items: center;
+  background-color: white;
+  height: 64px;
 }
 
 nav {
   display: flex;
+  font-size: 1.1rem;
+  margin-right: 24px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+header img {
+  margin-left: 24px;
+  height: 100%;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  color: dimgrey;
+  font-weight: 500;
+}
+
+.menu {
+  margin-left: 16px;
+}
+
+header h1 span {
+  color: lightgrey;
 }
