@@ -4,6 +4,11 @@ html {
   width: 100%;
 }
 
+a {
+  text-decoration-line: none;
+  color: inherit;
+}
+
 /*Header*/
 header {
   display: flex;
@@ -201,7 +206,6 @@ header h1 span {
   font-weight: bold;
   color: dimgrey;
   text-align: center;
-
 }
 
 .course .software,
@@ -237,4 +241,109 @@ header h1 span {
 
 .course .container p.margin {
   margin-bottom: 24px;
+}
+
+/*Thesis*/
+
+.thesis {
+  background-color: white;
+  width: 100%;
+}
+
+.thesis h1 {
+  font-size: 2.5rem;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: bold;
+  color: dimgrey;
+  text-align: center;
+}
+
+.thesis .container {
+  display: flex;
+}
+
+.thesis .main {
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.thesis video {
+  width: 100%;
+  margin-bottom: 24px;
+  margin-left: 24px;
+}
+
+.thesis h2 {
+  color: dimgrey;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-left: 16px;
+}
+
+.thesis p {
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  margin-left: 16px;
+  font-style: italic;
+  color: darkgrey;
+}
+
+.thesis .sidebar {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  padding-top: 16px;
+  padding-left: 48px;
+}
+
+.thesis .sidebar .fisma,
+.thesis .sidebar .now {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+}
+
+.thesis .sidebar .fisma {
+  background-color: lightgrey;
+}
+
+.thesis .sidebar .fisma img,
+.thesis .sidebar .now img {
+  width: 35%;
+  height: 100%;
+}
+
+.thesis .sidebar .fisma p,
+.thesis .sidebar .now p {
+  font-style: normal;
+  margin-bottom: auto;
+}
+
+.thesis .description {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/*Footer*/
+footer {
+  border-top: 1px solid lightgrey;
+  padding: 16px 24px;
+  color: darkgrey;
+  display: flex;
+}
+
+footer p {
+  width: 50%;
+}
+
+footer nav{
+  width: 50%;
+  text-align: right;
+}
+
+footer nav span {
+  margin-left: 16px;
 }
