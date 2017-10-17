@@ -26,6 +26,10 @@ header nav {
   margin-right: 24px;
 }
 
+header nav.mobile {
+  width: auto;
+}
+
 header img {
   height: 100%;
   margin-left: 24px;
@@ -43,6 +47,40 @@ header h1 {
 
 header h1 span {
   color: lightgrey;
+}
+
+header nav .login,
+header nav .online,
+header nav .on-campus {
+  display: none;
+}
+
+@media only screen and (max-device-width: 540px) {
+  header h1,
+  header nav.desktop {
+    display: none;
+  }
+
+  header nav.mobile {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    margin-right: 0px;
+    justify-content: space-around;
+  }
+
+  header nav img,
+  header nav .login,
+  header nav .online,
+  header nav .campus {
+    display: flex;
+    margin-right: 24px;
+  }
+
+  header {
+    justify-content: space-around;
+  }
+
 }
 
 /*Banner*/
