@@ -21,13 +21,22 @@ header {
 header nav {
   display: flex;
   font-size: 1.1rem;
-  width: 100%;
+  width: auto;
   justify-content: flex-end;
   margin-right: 24px;
 }
 
+header nav.desktop {
+  width: 100%;
+}
+
+header nav span:hover {
+  text-shadow: 2px 2px 5px grey;
+}
+
 header nav.mobile {
   width: auto;
+  margin-right: 0px;
 }
 
 header img {
@@ -49,13 +58,13 @@ header h1 span {
   color: lightgrey;
 }
 
-header nav .login,
-header nav .online,
-header nav .on-campus {
+header nav .login img,
+header nav .online img,
+header nav .on-campus img{
   display: none;
 }
 
-@media only screen and (max-device-width: 540px) {
+@media only screen and (max-width: 540px), (max-device-width: 540px) {
   header h1,
   header nav.desktop {
     display: none;
@@ -69,18 +78,20 @@ header nav .on-campus {
     justify-content: space-around;
   }
 
-  header nav img,
-  header nav .login,
-  header nav .online,
-  header nav .campus {
+  header nav img.logo,
+  header nav .login img,
+  header nav .online img,
+  header nav .campus img {
     display: flex;
     margin-right: 24px;
+    flex-basis: 57px;
+    flex: 1 1 0;
   }
+
 
   header {
     justify-content: space-around;
   }
-
 }
 
 /*Banner*/
@@ -99,7 +110,6 @@ header nav .on-campus {
 
 .banner h1 {
   font-size: 2.5rem;
-  max-width: 26rem;
   margin-bottom: 24px;
   font-weight: bold;
 }
@@ -113,7 +123,6 @@ header nav .on-campus {
 }
 
 .banner p {
-  max-width: 26rem;
   margin-bottom: 24px;
   font-size: 1.5rem;
 }
@@ -126,6 +135,39 @@ header nav .on-campus {
   padding-bottom: 8px;
   text-align: center;
   font-size: 1.2rem;
+}
+
+.banner .button:hover {
+  color: lightgrey;
+  font-weight: bold;
+  box-shadow: 5px 5px 2px grey;
+}
+
+@media only screen and (max-width: 540px), (max-device-width: 540px) {
+  .banner {
+      flex-direction: column;
+  }
+
+  .banner img {
+    width: 100%;
+    padding: 0;
+  }
+
+  .banner .content {
+    margin: 32px 16px;
+  }
+
+
+  .banner .content p {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  .banner h1 {
+    width: 100%;
+    margin-bottom: 0px;
+  }
 }
 
 /*Information*/
@@ -180,12 +222,17 @@ header nav .on-campus {
   margin-left: 24px;
 }
 
-.information .orientation img,
-.information .campus img,
-.information .guest-lecture img {
+.information img.desktop{
   width: 35%;
   height: 100%;
   margin: 16px;
+}
+
+.information img.mobile,
+.information .sidebar .orientation .mobile,
+.information .sidebar .campus .mobile,
+.information .sidebar .guest-lecture .mobile {
+  display: none;
 }
 
 .information .orientation,
@@ -209,7 +256,7 @@ header nav .on-campus {
 }
 
 .information .description p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 8px;
   color: darkgrey;
 }
@@ -219,8 +266,110 @@ header nav .on-campus {
   color: blue;
 }
 
+.information .description span:hover {
+  text-decoration-line: underline;
+}
+
 .information .guest-lecture {
   background-color: lightgrey;
+}
+
+@media only screen and (max-width: 540px), (max-device-width: 540px) {
+
+  .information {
+    margin-bottom: 32px;
+  }
+
+  .information .main {
+    display: none;
+  }
+
+  .information .sidebar {
+    margin-left: 0px;
+    border: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+
+  .information img.desktop{
+    display: none;
+  }
+
+  .information img.mobile {
+    display: flex;
+    margin: 16px;
+    max-width: 576px;
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .information .orientation,
+  .information .campus,
+  .information .guest-lecture {
+    flex-direction: column;
+    max-width: 100%;
+    border: 0px;
+    background-color: white;
+  }
+
+  .information .sidebar .orientation .mobile {
+    display: flex;
+    background-image: url("../images/information-orientation-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-height: 30rem;
+    min-height: 15rem;
+    margin: 16px;
+    color: transparent;
+  }
+
+  .information .sidebar .campus .mobile {
+    display: flex;
+    background-image: url("../images/information-campus-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-height: 30rem;
+    min-height: 15rem;
+    margin: 16px;
+    color: transparent;
+  }
+
+  .information .sidebar .guest-lecture .mobile {
+    display: flex;
+    background-image: url("../images/information-guest-lecture-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-height: 30rem;
+    min-height: 15rem;
+    margin: 16px;
+    color: transparent;
+  }
+
+  .information .description {
+    margin-left: 32px;
+  }
+
+  .information .description h1 {
+    margin-bottom: 16px;
+    font-size: 2rem;
+  }
+
+  .information .description p {
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+  }
+
+  .information .description span {
+    font-size: 1.5rem;
+  }
+
+  .information .sidebar .orientation,
+  .information .sidebar .campus {
+    margin-bottom: 48px;
+  }
 }
 
 /*Course*/
@@ -279,6 +428,45 @@ header nav .on-campus {
 
 .course .container p.margin {
   margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 540px), (max-device-width: 540px) {
+  .course {
+    background-color: inherit;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .course h1 {
+    margin-bottom: 12px;
+  }
+
+  .course .container {
+    margin: 0px 16px 16px 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course .container img,
+  .course .container p {
+    display: none;
+  }
+
+  .course .software,
+  .course .computerart,
+  .course .design,
+  .course .data,
+  .course .business,
+  .course .marketing {
+    background-color: darkgrey;
+    color: white;
+    min-width: 100%;
+    margin: 4px 0px;
+  }
+
+  .course .container h2 {
+    margin: 16px auto 16px 16px;
+  }
 }
 
 /*Thesis*/
@@ -365,6 +553,28 @@ header nav .on-campus {
   margin-bottom: auto;
 }
 
+@media only screen and (max-width: 540px), (max-device-width: 540px) {
+  .thesis h1 {
+    padding-bottom: 16px;
+  }
+
+  .thesis .main h2,
+  .thesis .main p,
+  .thesis .sidebar {
+    display: none;
+  }
+
+  .thesis .main {
+    min-width: 100%;
+  }
+
+  .thesis video {
+    margin: 0px 0px 24px 0px;
+    width: 100%;
+  }
+
+}
+
 /*Footer*/
 footer {
   border-top: 1px solid lightgrey;
@@ -384,4 +594,18 @@ footer nav{
 
 footer nav span {
   margin-left: 16px;
+}
+
+@media only screen (max-width: 540px), (max-device-width: 540px) {
+  footer {
+    padding: 16px;
+  }
+
+  footer p {
+    width: 100%;
+  }
+
+  footer nav {
+    display: none;
+  }
 }
