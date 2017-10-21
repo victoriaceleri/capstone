@@ -114,7 +114,7 @@ header nav.desktop {
 }
 
 header nav span {
-  transition: text-shadow 400ms ease-out 400ms;
+  transition: text-shadow 400ms ease-out 40ms;
 }
 
 header nav span:hover {
@@ -336,6 +336,7 @@ header nav .on-campus img{
 .information .guest-lecture {
   display: flex;
   border-bottom: 1px solid rgb(207, 220, 234);
+  padding-bottom: 16px;
   transition: all 400ms linear 50ms;
 }
 
@@ -464,11 +465,6 @@ header nav .on-campus img{
 
   .information .description span {
     font-size: 1.5rem;
-  }
-
-  .information .sidebar .orientation,
-  .information .sidebar .campus {
-    margin-bottom: 48px;
   }
 }
 
@@ -681,6 +677,7 @@ header nav .on-campus img{
 
   .course .container h2 {
     margin: 16px auto 16px 16px;
+    transition: text-shadow 400ms ease-out 40ms;
   }
 
   .course .container .mobile {
@@ -688,6 +685,11 @@ header nav .on-campus img{
     width: 5%;
     height: 100%;
     margin:0px 16px 0px 0px;
+  }
+
+
+  .course .container h2:hover{
+    text-shadow: 2px 2px 5px rgb(207, 220, 234);
   }
 
 }
