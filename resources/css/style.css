@@ -1,12 +1,93 @@
+/*Fonts*/
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Montserrat Italic'), local('Montserrat-Italic'), url(https://fonts.gstatic.com/s/montserrat/v11/-iqwlckIhsmvkx0N6rwPmhampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v11/zhcz-_WihjSQC0oHJ9TCYAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v11/BYPM-GE291ZjIXBWrtCweteM9fzAXBk846EtUMhet0E.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v11/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://fonts.gstatic.com/s/roboto/v18/vPcynSL0qHq_6dX7lKVByXYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/Hgo13k-tfSpn0qi1SFdUfZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v18/RxZJdnzeo3R5zSexge8UUZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/d-6IYplOFocCacKzxwXSOJBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/*General*/
 html {
   font-size: 16px;
-  font-family: Helvetica;
+  font-family: "Montserrat", serif;
   width: 100%;
 }
 
 a {
   text-decoration-line: none;
   color: inherit;
+  font-family: "Roboto", sans-serif;
+}
+
+.site {
+  position: relative;
+  top: 64px;
 }
 
 /*Header*/
@@ -16,6 +97,8 @@ header {
   background-color: white;
   height: 64px;
   width: 100%;
+  position: fixed;
+  z-index: 5;
 }
 
 header nav {
@@ -31,7 +114,8 @@ header nav.desktop {
 }
 
 header nav span:hover {
-  text-shadow: 2px 2px 5px grey;
+  text-shadow: 2px 2px 5px rgb(207, 220, 234);
+  font-family: "Roboto", sans-serif;
 }
 
 header nav.mobile {
@@ -42,11 +126,12 @@ header nav.mobile {
 header img {
   height: 100%;
   margin-left: 24px;
+  margin-right: 1px;
 }
 
 header h1 {
   font-size: 1.75rem;
-  color: dimgrey;
+  color: black;
   font-weight: 500;
 }
 
@@ -55,7 +140,7 @@ header h1 {
 }
 
 header h1 span {
-  color: lightgrey;
+  color: rgb(117, 179, 244);
 }
 
 header nav .login img,
@@ -78,7 +163,7 @@ header nav .on-campus img{
     justify-content: space-around;
   }
 
-  header nav img.logo,
+  header nav img,
   header nav .login img,
   header nav .online img,
   header nav .campus img {
@@ -88,7 +173,6 @@ header nav .on-campus img{
     flex: 1 1 0;
   }
 
-
   header {
     justify-content: space-around;
   }
@@ -96,16 +180,15 @@ header nav .on-campus img{
 
 /*Banner*/
 .banner {
-  background-color: lightgrey;
-  color: dimgrey;
+  background-image: url("../images/banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 30rem;
+  color: black;
   display: flex;
   width: 100%;
-}
-
-.banner img {
-  width: 60%;
-  height: 100%;
-  padding: 32px 24px;
 }
 
 .banner h1 {
@@ -117,9 +200,14 @@ header nav .on-campus img{
 .banner .content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-right: 24px;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(220, 220, 220, 0.5);
+  width: 100%;
+  margin: auto 16px 16px 16px;
+  padding-bottom: 16px;
+  height: 10rem;
+  text-align: center;
 }
 
 .banner p {
@@ -129,8 +217,8 @@ header nav .on-campus img{
 
 .banner .button {
   color: white;
-  background: dimgrey;
-  width: 100%;
+  background: black;
+  width: 50%;
   padding-top: 8px;
   padding-bottom: 8px;
   text-align: center;
@@ -138,35 +226,37 @@ header nav .on-campus img{
 }
 
 .banner .button:hover {
-  color: lightgrey;
+  color: rgb(207, 220, 234);
   font-weight: bold;
   box-shadow: 5px 5px 2px grey;
 }
 
 @media only screen and (max-width: 540px), (max-device-width: 540px) {
   .banner {
-      flex-direction: column;
+    flex-direction: column;
+    height: 20rem;
   }
 
-  .banner img {
-    width: 100%;
-    padding: 0;
-  }
 
   .banner .content {
-    margin: 32px 16px;
+    margin: auto 0px 0px 0px;
+    height: 10rem;
   }
 
-
   .banner .content p {
-    margin-top: 32px;
-    margin-bottom: 24px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 16px;
     width: 100%;
+    font-size: 1.2rem;
   }
 
   .banner h1 {
     width: 100%;
     margin-bottom: 0px;
+    margin-left: 16px;
+    font-size: 2rem;
+    padding-top: 8px;
   }
 }
 
@@ -196,7 +286,7 @@ header nav .on-campus img{
   margin-top: 32px;
   margin-left: 24px;
   font-weight: bold;
-  color: dimgrey;
+  color: black;
 }
 
 .information .main p {
@@ -204,12 +294,13 @@ header nav .on-campus img{
   margin-bottom: 24px;
   margin-left: 24px;
   font-style: italic;
-  color: lightgrey;
+  color: rgb(153, 184, 216);
+  font-family: "Roboto", sans-serif;
 }
 
 .information .main span {
   font-size: 1rem;
-  color: dimgrey;
+  color: black;
   margin-left: 24px;
 }
 
@@ -218,7 +309,7 @@ header nav .on-campus img{
   flex-direction: column;
   width: 40%;
   padding-top: 16px;
-  border-left: 1px solid lightgrey;
+  border-left: 1px solid rgb(207, 220, 234);
   margin-left: 24px;
 }
 
@@ -239,7 +330,7 @@ header nav .on-campus img{
 .information .campus,
 .information .guest-lecture {
   display: flex;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid rgb(207, 220, 234);
 }
 
 .information .description {
@@ -249,7 +340,7 @@ header nav .on-campus img{
 }
 
 .information .description h1 {
-  color: dimgrey;
+  color: black;
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 8px;
@@ -263,16 +354,19 @@ header nav .on-campus img{
 
 .information .description span {
   font-size: 1rem;
-  color: blue;
+  color: rgb(123, 164, 209);
 }
 
 .information .description span:hover {
   text-decoration-line: underline;
 }
 
-.information .guest-lecture {
-  background-color: lightgrey;
+.information .orientation:hover,
+.information .campus:hover,
+.information .guest-lecture:hover {
+  background-color: rgb(207, 220, 234);
 }
+
 
 @media only screen and (max-width: 540px), (max-device-width: 540px) {
 
@@ -375,7 +469,7 @@ header nav .on-campus img{
 /*Course*/
 
 .course {
-  background-color: lightgrey;
+  background-color: rgb(207, 220, 234);
   width: 100%;
   padding-bottom: 16px;
 }
@@ -391,8 +485,12 @@ header nav .on-campus img{
   font-size: 2.5rem;
   padding-top: 32px;
   font-weight: bold;
-  color: dimgrey;
+  color: black;
   text-align: center;
+}
+
+.course .container .mobile {
+  display: none;
 }
 
 .course .software,
@@ -406,39 +504,124 @@ header nav .on-campus img{
   background-color: white;
 }
 
-.course .container img {
-  width: 100%;
+.course .software .content {
+  background-image: url("../images/course-software.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 7rem;
+  padding: 16px;
 }
 
+.course .computerart .content {
+  background-image: url("../images/course-computer-art.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 7rem;
+  padding: 16px;
+}
+
+.course .design .content {
+  background-image: url("../images/course-design.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 7rem;
+  padding: 16px;
+}
+
+.course .data .content {
+  background-image: url("../images/course-data.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 7rem;
+  padding: 16px;
+}
+
+.course .business .content {
+  background-image: url("../images/course-business.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 7rem;
+  padding: 16px;
+}
+
+.course .marketing .content {
+  background-image: url("../images/course-marketing.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 7rem;
+  padding: 16px;
+}
+
+.course .software div.courses:hover,
+.course .computerart div.courses:hover,
+.course .design div.courses:hover,
+.course .data div.courses:hover,
+.course .business div.courses:hover,
+.course .marketing div.courses:hover {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.course .software div.courses span:hover,
+.course .computerart div.courses span:hover,
+.course .design div.courses span:hover,
+.course .data div.courses span:hover,
+.course .business div.courses span:hover,
+.course .marketing div.courses span:hover {
+  color: rgb(117, 179, 244);
+}
+
+.course .software {
+  height: 100%;
+}
+
+
 .course .container h2 {
-  color: dimgrey;
-  font-size: 1.3rem;
+  color: black;
+  font-size: 1.1rem;
   font-weight: 700;
   margin-top: 16px;
   margin-bottom: 8px;
   margin-left: 16px;
 }
 
-.course .container p {
+.course .container span {
   font-size: 1.1rem;
-  margin-bottom: 8px;
-  margin-left: 16px;
-  color: darkgrey;
+  color: transparent;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: block;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
-.course .container p.margin {
+.course .container span.margin {
   margin-bottom: 24px;
 }
+
 
 @media only screen and (max-width: 540px), (max-device-width: 540px) {
   .course {
     background-color: inherit;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
+    border-top: 1px solid rgb(207, 220, 234);
+    border-bottom: 1px solid rgb(207, 220, 234);
   }
 
   .course h1 {
     margin-bottom: 12px;
+  }
+
+  .course .container h2 {
+    font-size: 1.5rem;
+    height: 3.5rem;
   }
 
   .course .container {
@@ -447,9 +630,17 @@ header nav .on-campus img{
     align-items: center;
   }
 
-  .course .container img,
-  .course .container p {
+  .course .container span {
     display: none;
+  }
+
+  .course .software .content,
+  .course .computerart .content,
+  .course .design .content,
+  .course .data .content,
+  .course .business .content,
+  .course .marketing  .content {
+    background-image: none;
   }
 
   .course .software,
@@ -458,15 +649,25 @@ header nav .on-campus img{
   .course .data,
   .course .business,
   .course .marketing {
+    display: flex;
     background-color: darkgrey;
     color: white;
     min-width: 100%;
     margin: 4px 0px;
+    height: 3.5rem;
   }
 
   .course .container h2 {
     margin: 16px auto 16px 16px;
   }
+
+  .course .container .mobile {
+    display: flex;
+    width: 5%;
+    height: 100%;
+    margin:0px 16px 0px 0px;
+  }
+
 }
 
 /*Thesis*/
@@ -481,7 +682,7 @@ header nav .on-campus img{
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: bold;
-  color: dimgrey;
+  color: black;
   text-align: center;
 }
 
@@ -502,7 +703,7 @@ header nav .on-campus img{
 }
 
 .thesis h2 {
-  color: dimgrey;
+  color: black;
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 8px;
@@ -514,6 +715,11 @@ header nav .on-campus img{
   margin-bottom: 32px;
   margin-left: 16px;
   font-style: italic;
+  color: rgb(153, 184, 216);
+  font-family: "Roboto", sans-serif;
+}
+
+.thesis .sidebar p {
   color: darkgrey;
 }
 
@@ -532,8 +738,9 @@ header nav .on-campus img{
   padding: 16px;
 }
 
-.thesis .sidebar .fisma {
-  background-color: lightgrey;
+.thesis .sidebar .fisma:hover,
+.thesis .sidebar .now:hover {
+  background-color: rgb(207, 220, 234);
 }
 
 .thesis .sidebar .fisma img,
@@ -546,6 +753,7 @@ header nav .on-campus img{
 .thesis .sidebar .now p {
   font-style: normal;
   margin-bottom: auto;
+  font-family: "Roboto", sans-serif;
 }
 
 .thesis .description {
@@ -577,7 +785,7 @@ header nav .on-campus img{
 
 /*Footer*/
 footer {
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid rgb(207, 220, 234);
   padding: 16px 24px;
   color: darkgrey;
   display: flex;
@@ -585,6 +793,7 @@ footer {
 
 footer p {
   width: 50%;
+  font-family: "Roboto", sans-serif;
 }
 
 footer nav{
