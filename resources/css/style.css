@@ -113,6 +113,10 @@ header nav.desktop {
   width: 100%;
 }
 
+header nav span {
+  transition: text-shadow 400ms ease-out 400ms;
+}
+
 header nav span:hover {
   text-shadow: 2px 2px 5px rgb(207, 220, 234);
   font-family: "Roboto", sans-serif;
@@ -216,17 +220,18 @@ header nav .on-campus img{
 }
 
 .banner .button {
-  color: white;
+  color: rgb(207, 220, 234);
   background: black;
   width: 50%;
   padding-top: 8px;
   padding-bottom: 8px;
   text-align: center;
   font-size: 1.2rem;
+  transition: all 50ms ease-in 50ms;
 }
 
 .banner .button:hover {
-  color: rgb(207, 220, 234);
+  color: rgb(153, 184, 216);
   font-weight: bold;
   box-shadow: 5px 5px 2px grey;
 }
@@ -331,6 +336,7 @@ header nav .on-campus img{
 .information .guest-lecture {
   display: flex;
   border-bottom: 1px solid rgb(207, 220, 234);
+  transition: all 400ms linear 50ms;
 }
 
 .information .description {
@@ -576,6 +582,22 @@ header nav .on-campus img{
 .course .business div.courses span:hover,
 .course .marketing div.courses span:hover {
   color: rgb(117, 179, 244);
+  padding-top: 8px;
+}
+
+.course .software div.courses,
+.course .computerart div.courses,
+.course .design div.courses,
+.course .data div.courses,
+.course .business div.courses,
+.course .marketing div.courses,
+.course .software div.courses span,
+.course .computerart div.courses span,
+.course .design div.courses span,
+.course .data div.courses span,
+.course .business div.courses span,
+.course .marketing div.courses span {
+  transition: all 500ms linear 50ms;
 }
 
 .course .software {
@@ -736,6 +758,7 @@ header nav .on-campus img{
   display: flex;
   flex-direction: row;
   padding: 16px;
+  transition: all 400ms linear 50ms;
 }
 
 .thesis .sidebar .fisma:hover,
